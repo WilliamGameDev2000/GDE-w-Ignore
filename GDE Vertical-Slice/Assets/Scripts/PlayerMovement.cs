@@ -23,11 +23,12 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        movement = new Vector3(1.0f, 0.0f, 1.0f);
-        movement *= speed;
+        //movement = new Vector3(1.0f, 0.0f, 0.0f);
+        //movement *= speed;
 
+        transform.Translate(transform.right * speed * Time.deltaTime, Space.World);
         
-        character.Move(movement * Time.deltaTime);
+        //character.Move(movement * Time.deltaTime);
         character.transform.Rotate(0, angle, 0);
         
     }
