@@ -7,25 +7,47 @@ using UnityEngine.UI;
 public class Buttons : MonoBehaviour
 {
     public Button startButton;
-    public Button exitButton;
+    public Button instructionsButton;
+    public Button optionsButton;
+    public Button pauseButton;
 
     public string gameScene;
+    public string instructionsScene;
+    public string optionsScene;
+    public string pauseScene;
 
     public void Awake()
     {
-        startButton.onClick.AddListener(playGame);
-        exitButton.onClick.AddListener(exitGame);
+        startButton.onClick.AddListener(Play);
+        instructionsButton.onClick.AddListener(Instructions);
+        optionsButton.onClick.AddListener(Options);
+        pauseButton.onClick.AddListener(Pause);
     }
 
-    public void playGame()
+    public void Play()
     {
         SceneManager.LoadScene(gameScene);
     }
 
-    public void exitGame()
+    public void Instructions()
     {
-        // doesn't work in editor
-        Application.Quit();
-        Debug.Log("EXIT");
+        SceneManager.LoadScene(instructionsScene);
     }
+
+    public void Options()
+    {
+        SceneManager.LoadScene(optionsScene);
+    }
+
+    public void Pause()
+    {
+        SceneManager.LoadScene(pauseScene);
+    }
+
+    //public void exitGame()
+    //{
+    //    // doesn't work in editor
+    //    Application.Quit();
+    //    Debug.Log("EXIT");
+    //}
 }
