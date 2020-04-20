@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public float angle;
 
     public Vector3 movement;
+    public bool boatMooving = false;
 
 
     void Start()
@@ -30,7 +31,28 @@ public class PlayerMovement : MonoBehaviour
         
         //character.Move(movement * Time.deltaTime);
         character.transform.Rotate(0, angle, 0);
-        
+
+        if (speed == 0)
+        {
+            boatMooving = false;
+            Debug.Log("not mooving");
+        }
+        if (speed > 0)
+        {
+            boatMooving = true;
+            Debug.Log("mooving");
+        }
+        if (boatMooving)
+        {
+            FindObjectOfType<AudioManager>().Play("BoatStill");
+        }
+        if (!boatMooving)
+        {
+            FindObjectOfType<AudioManager>().Play("BoatMoving");
+            
+        }
+
+
     }
 
     public void AdjustSlider(float newSpeed)

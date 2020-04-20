@@ -56,7 +56,7 @@ public class Hertz : MonoBehaviour
                     float[] samples = new float[audioSource.clip.samples * audioSource.clip.channels];
                     audioSource.clip.GetData(samples, 0);
                     lastVolume = Mathf.Round(calculateAverageVolume(samples) * 10000F) / 100F;
-                    Debug.Log("Time: " + Time.fixedTime + " / average volume * 100F = " + lastVolume);
+                    //Debug.Log("Time: " + Time.fixedTime + " / average volume * 100F = " + lastVolume);
                     Microphone.End(null);
                 }
             }
