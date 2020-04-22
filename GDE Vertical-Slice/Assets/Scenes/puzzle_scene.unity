@@ -3342,7 +3342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624726101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.97, y: 1.261, z: 7.9}
+  m_LocalPosition: {x: -7.26, y: 1.261, z: -6.84}
   m_LocalScale: {x: 1.8, y: 1.8, z: 1.8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4045,6 +4045,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: cdec729a9206a6c45a70c62beff990b4, type: 3}
     Loop: 0
     volume: 0.38
+    pitch: 1
+    source: {fileID: 0}
+  - name: Collect
+    clip: {fileID: 8300000, guid: 24a06b159d997cd43a720182dd873f07, type: 3}
+    Loop: 0
+    volume: 0.24
     pitch: 1
     source: {fileID: 0}
 --- !u!4 &1971994039

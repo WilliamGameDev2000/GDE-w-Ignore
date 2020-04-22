@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoseSound : MonoBehaviour
 {
@@ -31,5 +32,7 @@ public class LoseSound : MonoBehaviour
         LoseCam.SetActive(true);
         WinCam.SetActive(false);
         PuzzleController.rolling = false;
+        SceneManager.LoadScene(0);
+
     }
 }

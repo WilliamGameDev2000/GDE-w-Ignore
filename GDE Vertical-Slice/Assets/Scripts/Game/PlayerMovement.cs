@@ -35,12 +35,12 @@ public class PlayerMovement : MonoBehaviour
         if (speed == 0)
         {
             boatMooving = false;
-            Debug.Log("not mooving");
+           
         }
         if (speed > 0)
         {
             boatMooving = true;
-            Debug.Log("mooving");
+           
         }
         if (boatMooving)
         {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -10,11 +11,16 @@ public class Timer : MonoBehaviour
     public float time;
     public Text timeText;
     public Text timeText2;
+
+    
+
+    
     // Start is called before the first frame update
     void Start()
     {
         filling = this.GetComponent<Image>();
         time = timeAmt;
+        
     }
 
     // Update is called once per frame
@@ -30,6 +36,9 @@ public class Timer : MonoBehaviour
         if (time < 0)
         {
             FindObjectOfType<AudioManager>().Play("Lose");
+            
         }
+        
+
     }
 }

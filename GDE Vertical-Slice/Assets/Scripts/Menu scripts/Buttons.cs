@@ -27,21 +27,25 @@ public class Buttons : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene(gameScene);
+        FindObjectOfType<AudioManager>().Play("Button");
     }
 
     public void Instructions()
     {
         SceneManager.LoadScene(instructionsScene);
+        FindObjectOfType<AudioManager>().Play("Button");
     }
 
     public void Options()
     {
         SceneManager.LoadScene(optionsScene);
+        FindObjectOfType<AudioManager>().Play("Button");
     }
 
     public void Pause()
     {
         SceneManager.LoadScene(pauseScene);
+        FindObjectOfType<AudioManager>().Play("Button");
     }
 
     //public void exitGame()

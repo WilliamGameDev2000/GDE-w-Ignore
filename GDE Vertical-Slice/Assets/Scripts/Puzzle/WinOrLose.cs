@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinOrLose : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class WinOrLose : MonoBehaviour
     public Timer timer;
 
     public PickUpCoin coinCollected;
+
     
 
 
@@ -45,7 +47,8 @@ public class WinOrLose : MonoBehaviour
         {
             CoinAppear.SetActive(false);
         }
-        
+        SceneManager.LoadScene(0);
+
     }
  
 }

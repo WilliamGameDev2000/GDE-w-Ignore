@@ -17,6 +17,7 @@ public class PickUpCoin : MonoBehaviour
         {
             Coin.SetActive(false);
             collected = true;
+            FindObjectOfType<AudioManager>().Play("Collect");
         }
         
     }
